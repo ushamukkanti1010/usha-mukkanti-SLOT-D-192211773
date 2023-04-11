@@ -1,0 +1,73 @@
+[5:54 pm, 11/04/2023] Mydhili: #include <stdio.h>
+#include <ctype.h>
+ 
+int main()
+{
+    // Initializing variable.
+    char str[100];  
+    int i, vowels = 0;
+    
+    // Accepting input.
+    printf("Enter the string: ");
+    // best way to read string rather than gets/fgets
+    scanf("%[^\n]s",&str);
+    
+    //Initializing for loop. 
+    for(i = 0; str[i]; i++)  
+    {
+        //Counting the vowels.
+        if(str[i]=='a'|| str[i]=='e'||str[i]=='i'||
+           str[i]=='o'|| str[i]=='u'||str[i]=='A'||
+           str[i]=='E'||str[i]=='I'||str[i]=='O' ||str[i]=='U')
+        {
+            vowels++;
+        }
+    }
+ 	
+    //Printing the count of vowels.
+    printf("Total number of vowels: = %d\n",vowels);
+    
+    return 0;
+}
+[5:54 pm, 11/04/2023] Mydhili: /**
+ * C program to count number of digits in an integer
+ */
+
+#include <stdio.h>
+
+int main()
+{
+    long long num;
+    int count = 0;
+
+    /* Input number from user */
+    printf("Enter any number: ");
+    scanf("%lld", &num);
+
+    /* Run loop till num is greater than 0 */
+    do
+    {
+        /* Increment digit count */
+        count++;
+
+        /* Remove last digit of 'num' */
+        num /= 10;
+    } while(num != 0);
+
+    printf("Total digits: %d", count);
+
+    return 0;
+}
+[5:54 pm, 11/04/2023] Mydhili: #include <stdio.h>
+int main() {
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);
+
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+        printf("%c is an alphabet.", c);
+    else
+        printf("%c is not an alphabet.", c);
+
+    return 0;
+}
